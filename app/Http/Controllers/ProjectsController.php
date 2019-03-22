@@ -10,20 +10,34 @@ class ProjectsController extends Controller
 {
     public function index() 
     {
-        $projects = Project::All();
+        $projects = Project::all();
 
 // php interprates this as a way of returning JSON
         // return $projects;
         
-        return view('projects.index', ['projects' => $projects]);
+        // return view('projects.index', ['projects' => $projects]);
 
         // or
 
-        // return view('projects.index', compact('projects'));
+        return view('projects.index', compact('projects'));
     }
 
     public function create() 
     {
         return view('projects.create');
+    }
+
+    public function store() 
+    {
+        // return request()->all();
+
+        $project = new Project();
+
+        $project->title = request('title');
+        $project->description = request('description');
+
+        $project->save();
+
+        return redirect('/projects');
     }
 }
