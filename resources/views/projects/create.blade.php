@@ -11,5 +11,23 @@
 <body>
     <h1>Create a New Project</h1>
 
+    <form>
+    <span>
+
+    <input type="text" name="title" placeholder="Project title"><br>
+
+    </span>
+    <span>
+
+    <span><textarea name="description" placeholder="Project description"></textarea></span><br>
+    
+    </span>
+    <div>
+
+    <button type="submit">Create Project</button>
+    
+    </div>
+    </form>
+
 </body>
 </html>
