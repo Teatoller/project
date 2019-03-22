@@ -11,7 +11,7 @@
 <body>
     <h1>Create a New Project</h1>
 
-    <form>
+    <form method="POST" action="/projects">
     <span>
 
     <input type="text" name="title" placeholder="Project title"><br>
