@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title></title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudfare.com/ajax/libs/bulma/0.7.2/css/bulma.css'>
     <script src='main.js'></script>
 </head>
 <body>
