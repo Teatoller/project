@@ -15,7 +15,7 @@ The prefix: ```http://localhost:8000/```
 | #  | endpoint            | description                  |
 |----|---------------------|------------------------------|
 | 1. | /projects           | show all projects            |
-| 2. | /projects/id/edit | select project to edit by id |
+| 2. | /projects/id/edit   | select project to edit by id |
 | 3. | /projects/create    | create new project           |
 
 ## Setup
