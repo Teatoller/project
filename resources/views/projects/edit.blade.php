@@ -4,7 +4,9 @@
 
 <h1 class="title">Edit Project</h1>
 
-<form method="PATCH" action="/projects/{{ $project->id }}">
+<form method="POST" action="/projects/{{ $project->id }}">
+    {{ method_field('PATCH') }}
+
     <div class="field">
         <label for="title" class="label">Title</label>
 
