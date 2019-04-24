@@ -8,73 +8,53 @@ use App\Project;
 
 class ProjectsController extends Controller
 {
-    public function index() 
+    public function index()
     {
         $projects = Project::all();
-
-// php interprates this as a way of returning JSON
-        // return $projects;
-        
-        // return view('projects.index', ['projects' => $projects]);
-
-        // or
 
         return view('projects.index', compact('projects'));
     }
 
-    public function create() 
+    public function create()
     {
         return view('projects.create');
     }
 
-    public function show(Project $project) {
+    public function show(Project $project)
+    {
 
-        // $project = Project::findOrFail($id);
-
-        // return $project;
 
         return view('projects.show', compact('project'));
     }
 
-    public function edit(Project $project) {
+    public function edit(Project $project)
+    {
 
-        // $project = Project::findOrFail($id);
         return view('projects.edit', compact('project'));
     }
 
-    public function update(Project $project) {
-        // dd(request()->all());
+    public function update(Project $project)
+    {
 
-        // $project = Project::findOrFail($id);
+        Project::create(request(['title', 'description']));
 
-        $project->title = request('title');
-        $project->description = request('description');
-
-        $project->save();
 
         return redirect('/projects');
     }
 
-    public function destroy(Project $project) {
-        // dd("herculus destroyer");
+    public function destroy(Project $project)
+    {
 
-        // Project::findOrFail($id)->delete();
         $project->delete();
 
         return redirect('/projects');
 
     }
 
-    public function store() 
+    public function store()
     {
-        // return request()->all();
+        Project::create(request(['title', 'description']));
 
-        $project = new Project();
-
-        $project->title = request('title');
-        $project->description = request('description');
-
-        $project->save();
 
         return redirect('/projects');
     }
