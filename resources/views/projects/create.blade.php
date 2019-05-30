@@ -13,7 +13,7 @@
 
         <div class="control">
 
-    <input type="text" class="input is-danger" name="title" placeholder="Project title" required><br>
+    <input type="text" class="input {{ $errors->has('title') ? 'is-danger' : '' }}" name="title" placeholder="Project title"><br>
         </div>
 
     </span>
@@ -23,7 +23,7 @@
         </div>
         <div class="control">
         
-    <span><textarea name="description" class="textarea is-danger" placeholder="Project description" required></textarea></span><br>
+    <span><textarea name="description" class="textarea {{ $errors->has('title') ? 'is-danger' : '' }}" placeholder="Project description"></textarea></span><br>
         </div>
     </span>
         <div class="field">
