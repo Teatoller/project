@@ -13,7 +13,7 @@
 
         <div class="control">
 
-    <input type="text" class="input {{ $errors->has('title') ? 'is-danger' : '' }}" name="title" placeholder="Project title"><br>
+    <input type="text" class="input {{ $errors->has('title') ? 'is-danger' : '' }}" name="title" placeholder="Project title" value=" {{ old('title') }}"><br>
         </div>
 
     </span>
@@ -23,7 +23,7 @@
         </div>
         <div class="control">
         
-    <span><textarea name="description" class="textarea {{ $errors->has('title') ? 'is-danger' : '' }}" placeholder="Project description"></textarea></span><br>
+    <span><textarea name="description" class="textarea {{ $errors->has('title') ? 'is-danger' : '' }}" placeholder="Project description" >{{ old('description') }}</textarea></span><br>
         </div>
     </span>
         <div class="field">
