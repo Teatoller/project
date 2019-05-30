@@ -15,16 +15,30 @@ class ProjectsController extends Controller
         return view('projects.index', compact('projects'));
     }
 
-    public function create()
-    {
-        return view('projects.create');
-    }
 
     public function show(Project $project)
     {
 
 
         return view('projects.show', compact('project'));
+    }
+
+    public function create()
+    {
+        return view('projects.create');
+    }
+
+    public function store()
+    {
+        request()->validate([
+            'title' => ['required','min:3'],
+            'description' => ['required', 'min:3']
+        ]);
+
+        Project::create(request(['title', 'description']));
+
+
+        return redirect('/projects');
     }
 
     public function edit(Project $project)
@@ -51,16 +65,4 @@ class ProjectsController extends Controller
 
     }
 
-    public function store()
-    {
-        request()->validate([
-            'title' =>'required',
-            'description' =>'required'
-        ]);
-        
-        Project::create(request(['title', 'description']));
-
-
-        return redirect('/projects');
-    }
 }
