@@ -39,10 +39,13 @@
             </div>
 
             <div class="field">
-                <div class="control">
+                <div class="control"><br />
                     <button type="submit" class="button is-link">Add Task</button>
                 </div>
             </div>
+
+            @include('errors')
+
 </form>
 
 @endsection
