@@ -28,14 +28,14 @@
 </div>
 @endif
 
-<form method="POST" action="/projects/{{$project->id}}/tasks" class="box">
+<form method="POST" action="/projects/{{ $project->id }}/tasks" class="box">
     @csrf
     <div class="field">
         <label class="label" for="description">New Task</label>
         <div>
 
             <div class="control">
-                <input type="text" class="input" name="" placeholder="New Task">
+                <input type="text" class="input" name="description" placeholder="New Task">
             </div>
 
             <div class="field">
